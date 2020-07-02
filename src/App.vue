@@ -1,28 +1,25 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<div id="app">
+		<Search />
+		<ErrorNotif v-if="this.$store.state.notif.err"/>
+		<LoadingData v-if="this.$store.state.loadingData"/>
+		<WeatherDashboard v-if="this.$store.state.weatherData && !this.$store.state.loadingData"/>
+	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Search from './components/Search.vue';
+import LoadingData from './components/LoadingData.vue';
+import ErrorNotif from './components/ErrorNotif.vue';
+import WeatherDashboard from './components/WeatherDashboard.vue';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+	name: 'App',
+	components: {
+		Search,
+		LoadingData,
+		ErrorNotif,
+		WeatherDashboard
+	}
 }
 </script>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
