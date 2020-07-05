@@ -31,6 +31,7 @@ export default new Vuex.Store({
 			state.notif[log] = false
 		},
 		clear(state) {
+			state.notif.err = false;
 			state.weatherData = null;
 			state.loadingData = false;
 		}

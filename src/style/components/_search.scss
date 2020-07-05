@@ -1,0 +1,46 @@
+input:focus {
+	// outline: none;
+}
+
+.jsz-search-container {
+	max-width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.jsz-search-input {
+	width: 100%;
+	font-size: 1.5rem;
+	border: none;
+	border-bottom: 1px solid #666;
+	color: #666;
+}
+
+.jsz-search-icon {
+	position: absolute;
+	font-size: 1.5rem;
+	color: #666;
+	top: 8px;
+}
+
+.jsz-search-btn {
+	margin-top: 8px;
+	z-index: 100;
+	// margin-right: 8px;
+}
+
+.jsz-place-btn {
+	margin-top: 8px;
+	// float: right;
+}
+
+.jsz-clear-btn {
+	color: $blue;
+	font-size: 1.6rem;
+	background: transparent;
+	border: none;
+	position: absolute;
+	top: 1px;
+	right: 0;
+	// padding: 0 4%;
+}

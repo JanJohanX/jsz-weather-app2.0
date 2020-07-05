@@ -1,9 +1,12 @@
 <template>
-	<div>
-		<input type="text" name="" id="" v-model="bySearch" @keypress="getBySearch">
-		<button @click="getBySearch">Search</button>
-		<button @click="getByLocation">Place</button>
-		<button @click="clearData">Clear</button>
+	<div class="jsz-search-container">
+		<!-- <span class="jsz-search-icon">
+			<i class="fas fa-search-location"></i>
+		</span> -->
+		<input class="jsz-search-input" type="text" v-model="bySearch" @keypress="getBySearch" autocomplete="off" placeholder="Search for city">
+		<button class="jsz-prim-btn jsz-search-btn" @click="getBySearch">Search</button>
+		<button class="jsz-prim-btn jsz-place-btn" @click="getByLocation">Place <i class="fas fa-map-marker-alt"></i></button>
+		<button class="jsz-sec-btn jsz-clear-btn" @click="clearData" v-if="this.$store.state.weatherData || this.$store.state.loadingData"><i class="fas fa-times"></i></button>
 	</div>
 </template>
 
@@ -21,7 +24,7 @@ export default {
 		getBySearch() {
 			if (event.key === 'Enter' || event.type === 'click') {
 				this.$store.dispatch('showLoading');
-				// this.$store.dispatch('Cl')
+				this.$store.dispatch('clearData');
 				this.$store.dispatch('hideNotif', 'err');
 
 				const url = `${this.urlBase}weather?q=${this.bySearch}&&units=metric&appid=${this.apiKey}`;
@@ -32,6 +35,7 @@ export default {
 		},
 		getByLocation() {
 			if (navigator.geolocation) {
+				this.bySearch = '';
 				this.$store.dispatch('showLoading');
 				this.$store.dispatch('hideNotif', 'err');
 

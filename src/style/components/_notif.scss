@@ -1,0 +1,37 @@
+.jsz-notif {
+	position: absolute;
+	width: 90%;
+	max-width: 320px;
+	background-color: white;
+	height: auto;
+	font-size: 13px;
+	color: #444;
+}
+
+.jsz-err-notif {
+	border: 1px solid #E3001A;
+	border-radius: 5px;
+	padding: 10px;
+	right: 4%;
+	top: 2%;
+	animation: showNotif .4s;
+}
+
+.jsz-close-notif {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	color: #D00000;
+	background: none;
+	border: none;
+	font-size: 16px;
+}
+
+@keyframes showNotif {
+	from {
+		right: 0%;
+	}
+	to {
+		right: 4%;
+	}
+}

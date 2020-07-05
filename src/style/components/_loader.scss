@@ -1,0 +1,14 @@
+
+.loader {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.loader-text {
+	position: absolute;
+	top: calc(30% + 36px);
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

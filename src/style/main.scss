@@ -1,0 +1,42 @@
+@import './components/vars.scss';
+@import './components/search.scss';
+@import './components/notif.scss';
+@import './components/loader.scss';
+@import './components/dashboard.scss';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	color: #444;
+}
+
+#app {
+	
+	padding: 0 4%;
+	max-width: 1000px;
+	margin: 4% auto;
+	// margin-top: 4%;
+}
+
+button {
+	cursor: pointer;
+}
+
+// .jsz-prim-btn {
+// 	background-color: $blue;
+// 	border: none;
+// 	border-radius: 5px;
+// 	color: white;
+// 	font-size: 16px;
+// 	padding: 5px 0px;
+// 	width: 150px;
+// }
