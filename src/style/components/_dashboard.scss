@@ -60,11 +60,18 @@
 .jsz-w-temp {
 	font-size: 1.3rem;
 	margin-bottom: 16px;
+	b {
+		color: $blue;
+	}
 }
 
 .jsz-w-temp-sub {
+	margin-bottom: 16px;
+	p {
+		font-size: 14px;
+	}
 	p:first-child {
-		margin-bottom: 16px;
+		margin-right: 16px;
 	}
 }
 
@@ -75,8 +82,6 @@
 #weatherIcon {
 	position: absolute;
 	right: 20px;
-	// font-size: 3rem;
-	align-self: center;
 }
 
 .jsz-w-humidity-container {

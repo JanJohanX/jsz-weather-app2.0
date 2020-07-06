@@ -20,23 +20,15 @@ body {
 }
 
 #app {
-	
 	padding: 0 4%;
-	max-width: 1000px;
-	margin: 4% auto;
-	// margin-top: 4%;
+	max-width: 950px;
+	margin: 6% auto;
 }
 
 button {
 	cursor: pointer;
 }
 
-// .jsz-prim-btn {
-// 	background-color: $blue;
-// 	border: none;
-// 	border-radius: 5px;
-// 	color: white;
-// 	font-size: 16px;
-// 	padding: 5px 0px;
-// 	width: 150px;
-// }
+input {
+	border-radius: 0;
+}

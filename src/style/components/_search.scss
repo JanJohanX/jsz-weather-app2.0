@@ -1,7 +1,3 @@
-input:focus {
-	// outline: none;
-}
-
 .jsz-search-container {
 	max-width: 100%;
 	margin: 0 auto;
@@ -9,11 +5,13 @@ input:focus {
 }
 
 .jsz-search-input {
-	width: 100%;
 	font-size: 1.5rem;
 	border: none;
 	border-bottom: 1px solid #666;
 	color: #666;
+	// width: stretch;
+	width: calc(100% - 284px);
+	margin-right: 8px;
 }
 
 .jsz-search-icon {
@@ -24,14 +22,12 @@ input:focus {
 }
 
 .jsz-search-btn {
-	margin-top: 8px;
 	z-index: 100;
-	// margin-right: 8px;
+	margin: 8px 16px 0px 0px;
 }
 
 .jsz-place-btn {
 	margin-top: 8px;
-	// float: right;
 }
 
 .jsz-clear-btn {
@@ -39,8 +35,22 @@ input:focus {
 	font-size: 1.6rem;
 	background: transparent;
 	border: none;
-	position: absolute;
+	position: relative;
 	top: 1px;
-	right: 0;
-	// padding: 0 4%;
+	right: 26px;
+}
+
+.jsz-prim-btn {
+	color: white;
+	border: none;
+	border-radius: 5px;
+	background-color: $blue;
+	font-size: 16px;
+	padding: 6px 0px;
+	width: 120px;
+}
+@media only screen and (max-width: 786px) {
+	.jsz-search-input {
+		width: calc(100% - 26px);
+	}
 }

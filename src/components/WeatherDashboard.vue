@@ -13,20 +13,17 @@
 				<div class="jsz-w-temp">
 					Temperature: <b>{{Math.round(weatherData.main.temp)}} °C </b>
 				</div>
-				<div class="jsz-col jsz-w-temp-sub">
-					<p>
-						Min. {{Math.round(weatherData.main.temp_min)}} °C
-					</p>
-					<p>
-						Max. {{Math.round(weatherData.main.temp_max)}} °C
-					</p>
+				<div class="jsz-row jsz-w-temp-sub">
+					<p>Min. {{Math.round(weatherData.main.temp_min)}} °C</p>
+					<p>Max. {{Math.round(weatherData.main.temp_max)}} °C</p>
 				</div>
+				<p>Temp feel: {{Math.round(weatherData.main.feels_like)}} °C</p>
 			</div>
 
 			<div class="jsz-row jsz-w-weather-container">
 				<div class="jsz-col">
 					<h2>{{weatherData.weather[0].main}}</h2>
-					<p><em>{{weatherData.weather[0].description}}</em></p>
+					<p>{{weatherData.weather[0].description}}</p>
 					<p>Wind speed: <b>{{weatherData.wind.speed}} m/s </b> <i class="fas fa-wind"></i> </p>
 				</div>
 				<div id="weatherIcon">
@@ -46,9 +43,6 @@
 			</div>
 		</div>
 		
-		
-		<br>
-		temp feel: {{Math.round(weatherData.main.feels_like)}} °C
 		<br>
 		pressure: {{weatherData.main.pressure}} hPa
 		<br>

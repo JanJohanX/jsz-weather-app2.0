@@ -1,12 +1,10 @@
 <template>
 	<div class="jsz-search-container">
-		<!-- <span class="jsz-search-icon">
-			<i class="fas fa-search-location"></i>
-		</span> -->
 		<input class="jsz-search-input" type="text" v-model="bySearch" @keypress="getBySearch" autocomplete="off" placeholder="Search for city">
+		<button class="jsz-sec-btn jsz-clear-btn" @click="clearData" v-if="this.$store.state.weatherData || this.$store.state.loadingData"><i class="fas fa-times"></i></button>
+
 		<button class="jsz-prim-btn jsz-search-btn" @click="getBySearch">Search</button>
 		<button class="jsz-prim-btn jsz-place-btn" @click="getByLocation">Place <i class="fas fa-map-marker-alt"></i></button>
-		<button class="jsz-sec-btn jsz-clear-btn" @click="clearData" v-if="this.$store.state.weatherData || this.$store.state.loadingData"><i class="fas fa-times"></i></button>
 	</div>
 </template>
 
